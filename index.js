@@ -36,3 +36,23 @@ showTodos(foundTodos)
 console.log(`\n==== => Show Todo Texts ('THE')====`)
 const foundTodos2 = searchTodos(todos, 'THE')
 showTodos(foundTodos2)
+
+
+console.log(`\n==== add Todo Texts ('Flying to the moon') ====`)
+
+const addTodo = (todoName, newTodo) => {
+  todoName.push(newTodo)
+  showTodos(todoName)
+}
+
+addTodo(todos, 'Flying to the moon')
+
+
+console.log(`\n==== delete Todo Texts ('Eat some lunch') ====`)
+
+const deleteTodo = (todoName, todoIndex) => {
+  todoName.splice(todoIndex, 1)
+  showTodos(todoName)
+}
+
+deleteTodo(todos, 1)
